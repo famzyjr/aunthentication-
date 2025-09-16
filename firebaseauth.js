@@ -1,5 +1,6 @@
+ 
 // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
   import  {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from  'https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js';
   import {getFirestore,setDoc, doc} from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js';
@@ -10,7 +11,7 @@
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   
   const firebaseConfig = {
-    apiKey: "AIzaSyDL-OPSvHyD2gsypGmcW1h5f6rqKBQufwg",
+    apiKey:'AIzaSyDL-OPSvHyD2gsypGmcW1h5f6rqKBQufwg',
     authDomain: "learing-cbbcb.firebaseapp.com",
     projectId: "learing-cbbcb",
     storageBucket: "learing-cbbcb.firebasestorage.app",
@@ -23,6 +24,7 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const auth = getAuth(app)
+  const db = getFirestore(app)
 const ShowMessage=(message, divId)=>{
 let messageDiv  = document.getElementById(divId);
 messageDiv.style.display = 'block';
@@ -46,12 +48,12 @@ signUP.addEventListener('click',function(e){
   const user = userCredentaial.user;
   // save user data in firestore
   const userData = {email, firstname , lastName};
-  const docRef = doc(db, 'users', user.id);
+  const docRef = doc(db, 'users', user.uid);
 
   return setDoc(docRef, userData);
 })
 .then(()=>{
-  ShowMessage('Account Created Successfully, signUpMessage');
+  ShowMessage('Account Created Successfully', 'signUpMessage');
   window.location.href = 'index.html';
 })
 .catch((error)=>{
@@ -63,7 +65,30 @@ ShowMessage('Email address Already Exists !!!', 'signUpMessage');
 }
 });
 
-  
   })
 
+  const signIn  = document.getElementById('submitSignIn');
+  signIn.addEventListener('click',(e)=>{
+   e.preventDefault();
+   const email = document.getElementById('email').value;
+   const password = document.getElementById('password').value;
+   const auth = getAuth(app);
+   signInWithEmailAndPassword(auth, email, password)
+   .then((userCredentaial)=>{
+    ShowMessage('login is successful','signInMessage');
+    const user = userCredentaial.user;
+    localStorage.setItem('loggedInUserId', user.uid);
+    window.location.href = 'Homepage.html'
+   })
+   .catch((error)=>{
+    const errorCode = error.code;
+    if(errorCode === 'auth/invalid-credential'){
+     ShowMessage('Incorrect Email or Password', 'signInMessage')
+    }
+    else{
+      ShowMessage('Account does not Exit', 'signInMessage');
+
+    }
+   })
+  })
 
