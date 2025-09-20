@@ -1,34 +1,39 @@
+
 body{
-
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+background-color: #F8FAFC;
 }
 
-h1{
-    text-align: center;
+.headerBorder{
+border-bottom: 1px solid gainsboro;
+padding-left: 200px;
+position: relative;
+right: 10px;
 }
 
-button{
-color: blueviolet;
-background-color: #c9d6ff;
-padding: 5px;
-border-radius: 5px;
-font-size: 1rem;
-font-weight: bold;
-border: none;
+.sidebarContent {
+  height: 50px;          /* set fixed height */
+  width: 160px;          /* set fixed width */
+  padding: 10px 0 10px 20px; /* consistent padding */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out; /* smooth effect */
 }
 
-button,div{
-    margin-left: 15%;
-    font-size: 20px;
-    padding: 10px;
+.sidebarContent:hover {
+  background-color: #F5F5F5;
 }
 
-div{
-font-weight: 400;
-color: rgb(12, 11, 11);
+ .active {
+     color: #2563eb;
+    }
+
+    li{
+    color: #64748b;
+    }
+
+.iconBG{
+  background-color: #2563eb;
 }
 
-span{
-font-weight: 600;
-font-size: 22px;
-color: black;
-}

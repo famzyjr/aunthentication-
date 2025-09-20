@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
   import  {getAuth, onAuthStateChanged, signOut} from  'https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js';
   import {getFirestore,getDoc, doc} from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js'; 
-
+   const iconElement =  document.getElementById('loggedUserEmail');
     const firebaseConfig = {
     apiKey: "AIzaSyDL-OPSvHyD2gsypGmcW1h5f6rqKBQufwg",
     authDomain: "learing-cbbcb.firebaseapp.com",
@@ -26,8 +26,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebas
        if(docSnap.exists()){
         const userData = docSnap.data();
         document.getElementById('loggedUserfName').innerText=userData.firstname;
+        iconElement.innerText = userData.email.charAt(0).toUpperCase();
         document.getElementById('loggedUserLName').innerText = userData.lastName;
-        document.getElementById('loggedUserEmail').innerText =userData.email;
+        // document.getElementById('loggedUserEmail').innerText =userData.;
        }else{
         console.log('no document found match ID ');
        }
@@ -50,3 +51,17 @@ signOut(auth)
     
  })
   })
+
+ document.addEventListener('DOMContentLoaded',
+    function () {
+        const navItems = document.querySelectorAll('.nav-item');
+
+        navItems.forEach(item => {
+            item.addEventListener('click',
+                function () {
+                    navItems.forEach(navItem => navItem
+                        .classList.remove('active'));
+                    this.classList.add('active');
+                });
+        });
+    });

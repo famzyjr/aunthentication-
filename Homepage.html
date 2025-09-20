@@ -4,14 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="home.css">
     <script type="module" src="homepage.js"></script>
 </head>
 
 <body>
-<h1>Welcome to the HomePage</h1> 
- <div>First Name: <span id="loggedUserfName"></span></div>
- <div>Last Name: <span  id="loggedUserLName"></span></div>
- <div>Email: <span  id="loggedUserEmail"></span></div>
- <button id="logoutButton">Logout</button>
+ <div class="bg-[#fff] w-[200px] h-[150vh]  ">
+ <div class="navheader p-[10px]">
+     <h1 class=" text-[#2563EB] font-bold  text-2xl">$ FinSave</h1>
+<div>
+ <span class="headerBorder"></span>
+</div>
+ </div>
+ 
+ <ul class="flex flex-col p-[20px] nav_links gap-[30px]">
+ <li class="nav-item">
+ <div class="flex gap-2 cursor-pointer text-center sidebarContent">
+ <div><img width="30" height="30 "   src="https://img.icons8.com/ios-glyphs/30/228BE6/windows-11.png" alt="windows-11"/></div>
+  <a  href="#" class=" mt-[2px] font-bold">DashBoard</a></div>
+ </li>
+  <li class="nav-item">
+ <div class="flex sidebarContent gap-2 cursor-pointer">
+ <div><img width="30" height="30" src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png" alt="bullish--v1"/></div>
+  <a  href="#"class=" mt-[2px] font-bold">Investments</a></div>
+ </li>
+ 
+   <li class="nav-item">
+ <div class="flex sidebarContent gap-2 cursor-pointer">
+ <div><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png" alt="money-box--v1"/></div>
+  <a href="#" class=" mt-[2px] font-bold">Savings</a></div>
+ </li>
+
+  <li class="nav-item">
+ <div class="flex sidebarContent gap-2 cursor-pointer">
+ <div><img width="30" height="30" src="https://img.icons8.com/external-goofy-solid-kerismaker/96/228BE6/external-Desk-Calender-stationery-goofy-solid-kerismaker.png" alt="external-Desk-Calender-stationery-goofy-solid-kerismaker"/></div>
+  <a href="#" class=" mt-[2px] font-bold">Transactions</a></div>
+
+  <li class="nav-item">
+ <div class="flex sidebarContent gap-2 cursor-pointer">
+ <div><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/228BE6/bar-chart.png" alt="bar-chart"/></div>
+  <a href="#" class=" mt-[2px] font-bold">Analytics</a></div>
+ </li>
+  <li class="nav-item">
+ <div class="flex sidebarContent gap-2 cursor-pointer">
+ <div><img width="30" height="30" src="https://img.icons8.com/material-rounded/24/228BE6/user.png" alt="user"/></div>
+  <a href="#" class=" mt-[2px] font-bold">Contacts</a></div>
+ </li>
+  <li class="nav-item">
+ <div class="flex sidebarContent gap-2 cursor-pointer">
+ <div><img width="30" class="nav-item" height="30" src="https://img.icons8.com/material-sharp/24/228BE6/settings.png" alt="settings"/></div>
+  <a href="#" class=" mt-[2px] font-bold">Settings</a></div>
+ </li>
+ </ul>
+ <div class="p-2">
+  <div>
+    <span class="headerBorder"></span>
+  </div>
+
+  <div class="flex items-center gap-[15px] mt-[10px]">
+    <!-- User Icon -->
+    <div class=" iconBG rounded-full w-[45px] h-[45px] flex items-center justify-center text-white font-bold cursor-pointer">
+      <span id="loggedUserEmail"></span>
+    </div>
+
+    <!-- User Info -->
+    <div class="flex gap-[8px] text-gray-800 font-boldm">
+      <div><span id="loggedUserfName"></span></div>
+      <div><span id="loggedUserLName"></span></div>
+    </div>
+    <!-- Logout Button -->
+  </div>
+  <div class="flex ">
+      <img  id="logoutButton" width="30" height="30" class="cursor-pointer ml-auto mt-[140px]  " src="https://img.icons8.com/ios/50/228BE6/exit--v1.png" alt="exit--v1"/>
+  </div>
+</div>
+</div>
+  
+ </div>
 </body>
 </html>
