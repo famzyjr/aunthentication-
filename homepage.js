@@ -52,16 +52,18 @@ signOut(auth)
  })
   })
 
- document.addEventListener('DOMContentLoaded',
-    function () {
-        const navItems = document.querySelectorAll('.nav-item');
+ document.addEventListener('DOMContentLoaded', function () {
+  const navItems = document.querySelectorAll('.nav-item a');
+  const currentPage = window.location.pathname.split("/").pop();
 
-        navItems.forEach(item => {
-            item.addEventListener('click',
-                function () {
-                    navItems.forEach(navItem => navItem
-                        .classList.remove('active'));
-                    this.classList.add('active');
-                });
-        });
-    });
+  navItems.forEach(item => {
+    // Highlight active link based on current page
+    if (item.getAttribute("href") === currentPage) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+
+   
+  });
+});
