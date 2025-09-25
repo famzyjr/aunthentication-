@@ -44,4 +44,55 @@ right: 10px;
 
 header{
   z-index: 20;
+  display: flex;
+  justify-content:space-around;
 }
+
+
+
+.f{
+background-color: #fff;
+height: 50px;
+border-bottom: 1px solid #64748b;
+position: fixed;
+left: 250px;
+width: 100%;
+right: 0;
+top: 0px;
+padding: 20px;
+}
+
+.mainContent{
+ position: relative; 
+top: 100px; 
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.headerTextTwo{
+  color:#64748b;
+}
+
+.headerTextOne{
+color: #1E293B;
+}
+.ddd{
+margin-top: -60px;
+}
+
+.headerbtn{
+  background-color:  #2563eb;
+  color: white;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 20px;
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+
+.headerbtn:hover{
+background-color: #1d4ed8;
+}
+

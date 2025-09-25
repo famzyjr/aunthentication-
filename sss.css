@@ -1,0 +1,88 @@
+body{
+background-color: #F8FAFC;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+overflow: visible;
+}
+
+.headercon{
+position: fixed;
+right: 0;
+top: 0;
+background-color: red;
+width:70%;
+padding: 10px;
+border-bottom: 1px solid gainsboro;
+}
+
+.header{
+display: flex;
+justify-content: space-between;
+}
+
+.DashboardContentCon{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 100px;
+}
+
+.sidebar{
+margin-top: -320px;
+/* position: fixed; */
+height: 150vh;
+}
+
+.iconBG{
+  background-color: #2563eb;
+}
+
+.d{
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.f{
+background-color: #fff;
+height: 50px;
+border-bottom: 1px solid #64748b;
+position: fixed;
+left: 250px;
+width: 100%;
+right: 0;
+top: 0px;
+padding: 20px;
+}
+
+.headerBorder{
+border-bottom: 1px solid gainsboro;
+padding-left: 200px;
+position: relative;
+right: 10px;
+}
+
+.active {
+     color: #2563eb;
+    }
+
+    li{
+    color: #64748b;
+    }
+
+    .sidebarContent:hover {
+  background-color: #F5F5F5;
+}
+
+.sidebarContent {
+  height: 50px;          /* set fixed height */
+  width: 160px;          /* set fixed width */
+  padding: 10px 0 10px 20px; /* consistent padding */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out; /* smooth effect */
+}
+
+.m{
+position: relative;
+bottom: 5px;
+}
