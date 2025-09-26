@@ -1,98 +1,152 @@
-
-body{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color: #F8FAFC;
+body {
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;   /* ✅ always allow vertical scroll */
+  overflow-x: hidden; /* ✅ prevent horizontal scroll */
+   font-family: "Geist", sans-serif;
 }
 
-.headerBorder{
-border-bottom: 1px solid gainsboro;
-padding-left: 200px;
-position: relative;
-right: 10px;
+
+
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid gainsboro;
+  z-index: 1000; 
+  overflow-y: auto;   /* ✅ sidebar can scroll if items overflow */
+}
+
+/* ===== Header ===== */
+.headercon {
+  position: fixed;
+  top: 0;
+  left: 220px;   /* ✅ starts after sidebar */
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid gainsboro;
+  z-index: 900; 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Dashboard Content ===== */
+.DashboardContentCon {
+  position: relative;
+  margin-left: 220px;  /* ✅ leaves space for sidebar */
+  margin-top: 80px;    /* ✅ leaves space for header */
+  padding: 20px;
+  z-index: 10;
+  min-height: 100vh;   /* ✅ makes body always tall enough */
+}
+
+
+
+/* ===== Other Styles ===== */
+.iconBG {
+  background-color: #2563eb;
+}
+
+.d {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.active {
+  color: #2563eb;
+}
+
+li {
+  list-style: none;
+  color: #64748b;
 }
 
 .sidebarContent {
-  height: 50px;          /* set fixed height */
-  width: 160px;          /* set fixed width */
-  padding: 10px 0 10px 20px; /* consistent padding */
+  height: 50px;
+  width: 160px;
+  padding: 10px 0 10px 20px;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out; /* smooth effect */
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
+
+
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
 
 .sidebarContent:hover {
   background-color: #F5F5F5;
 }
 
- .active {
-     color: #2563eb;
-    }
-
-    li{
-    color: #64748b;
-    }
-
-.iconBG{
-  background-color: #2563eb;
+.ff{
+  width: 220px;
+  position: relative;
+  right: 10px;
+  border-bottom: 1px solid gainsboro;  /* 👈 adds bottom border */
 }
 
-.d{
-  color: #2563eb;
-  font-weight: 700;
-}
-
-header{
-  z-index: 20;
-  display: flex;
-  justify-content:space-around;
-}
-
-
-
-.f{
-background-color: #fff;
-height: 50px;
-border-bottom: 1px solid #64748b;
-position: fixed;
-left: 250px;
-width: 100%;
-right: 0;
-top: 0px;
-padding: 20px;
-}
-
-.mainContent{
- position: relative; 
-top: 100px; 
+.dasboardContentHeader{
 display: flex;
-justify-content: space-around;
-align-items: center;
+flex-direction: row;
+gap: 20px;
+justify-content:space-around;
 }
 
-.headerTextTwo{
-  color:#64748b;
-}
-
-.headerTextOne{
-color: #1E293B;
-}
-.ddd{
-margin-top: -60px;
-}
-
-.headerbtn{
-  background-color:  #2563eb;
-  color: white;
-  cursor: pointer;
-  padding: 3px;
-  border-radius: 20px;
+.reportbtn{
+  background-color: #3A67D8;
+  padding: 10px;
+  color: #fff;
   display: flex;
-  gap: 5px;
-  padding: 5px;
+  border-radius: 20px;
+  cursor:pointer;
+  gap: 10px;
 }
 
-.headerbtn:hover{
-background-color: #1d4ed8;
+.overviewHeader h1{
+font-weight: 800;
+font-size: 25px;
+}
+.overviewHeader p{
+  color: #64748b; 
+}
+.MonthlyGoalPara{
+  color: green;
+}
+.DashboardContentPara p{
+  color: #1E293B;
+}
+.DashboardContentPara{
+  color:#10b981;
+  margin-top: 20px;
 }
 
+.DashboardContent {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 20px;
+  width: 210px;
+  height: 200px;
+  margin-top: 30px;
+}
