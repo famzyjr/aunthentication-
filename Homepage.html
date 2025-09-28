@@ -9,6 +9,7 @@
   <script type="module" src="homepage.js"></script>
   <link rel="stylesheet" href="Home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
@@ -51,8 +52,9 @@
         </div>
         <div class="DashboardContent ">
           <div>
-            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] "><img width="20" height="20" src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png"
-                alt="bullish--v1" /></span>
+            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] "><img width="20"
+                  height="20" src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png"
+                  alt="bullish--v1" /></span>
               <p class="text-[#64748b]">Investments</p>
             </div>
             <div class="DashboardContentPara">
@@ -67,8 +69,9 @@
         </div>
         <div class="DashboardContent ">
           <div>
-            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] "><img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png"
-                alt="money-box--v1" /></span>
+            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] "><img width="20"
+                  height="20" src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png"
+                  alt="money-box--v1" /></span>
               <p class="text-[#64748b]">Savings</p>
             </div>
             <div class="DashboardContentPara">
@@ -86,20 +89,27 @@
             <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] ">$</span>
               <p class="text-[#64748b]">Monthly Goal</p>
             </div>
-            <div class="DashboardContentPara">
+            <div class="DashboardContentPara flex flex-col gap-[10px]">
               <p class="font-bold text-2xl  text-[#1E293B]">78%</p>
+              <div class="progress-container">
+                <div class="progress-bar" id="myProgressBar"></div>
+              </div>
               <div class="flex">
                 <div class="flex">
-                  <p class="MonthlyGoalPara">$3,500 / $4,500</p> 
+                  <p class="MonthlyGoalPara">$3,500 / $4,500</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <div>
-        <!-- wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww -->
+        <div>
+        <div class="chartcon">
+            <canvas id="myChart"></canvas>
+        </div>
+        </div>
+
       </div>
 
     </div>

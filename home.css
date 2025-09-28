@@ -150,3 +150,26 @@ font-size: 25px;
   height: 200px;
   margin-top: 30px;
 }
+
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  width: 0%; /* Initial width */
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+
+.chartcon{
+  background-color: #fff;
+  width: 700px;
+  border-radius: 20px;
+  padding: 20px;
+}
