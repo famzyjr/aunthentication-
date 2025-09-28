@@ -169,7 +169,20 @@ font-size: 25px;
 
 .chartcon{
   background-color: #fff;
-  width: 700px;
+  width: 600px;
   border-radius: 20px;
+  
+  padding: 20px;
+}
+
+.chartconText{
+  display: flex;
+  justify-content: space-between;
+}
+
+.chartconTwo{
+  background-color: #fff;
+  width: 220px;
+  border-radius: 10px;
   padding: 20px;
 }
