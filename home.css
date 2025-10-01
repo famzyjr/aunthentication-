@@ -60,11 +60,11 @@ body {
 /* ===== Other Styles ===== */
 .iconBG {
   background-color: #2563eb;
+  padding: 20px;
 }
 
 .d {
   color: #2563eb;
-  font-weight: 700;
 }
 
 .active {
@@ -87,8 +87,6 @@ li {
   gap: 10px;
   cursor: pointer;
 }
-
-
 
 .sidebar::-webkit-scrollbar {
   display: none;
@@ -169,9 +167,9 @@ font-size: 25px;
 
 .chartcon{
   background-color: #fff;
+  border: 1px solid #e5e7eb;
   width: 600px;
   border-radius: 20px;
-  
   padding: 20px;
 }
 
@@ -180,9 +178,70 @@ font-size: 25px;
   justify-content: space-between;
 }
 
-.chartconTwo{
+.chartconTwoCon{
   background-color: #fff;
-  width: 220px;
+  border: 1px solid #e5e7eb;
+  width: 230px;
+  gap: 20px;
   border-radius: 10px;
+  padding: 30px;
+  
+}
+
+.viewall{
+   height: 50px;
+  width: 100px;
   padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.viewall:hover{
+   background-color: #F5F5F5;
+}
+
+.k{
+  color: gray;
+}
+
+.e{
+margin-top: 30px;
+
+}
+
+.RecentTransactions{
+  background-color: #fff;
+  width: 600px;
+  height: 530px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;;
+  padding: 20px;
+}
+.RecentTransactionsHeader{
+  display: flex;
+  justify-content: space-between;
+}
+.RecentText{
+font-weight: 400;
+}
+
+.arrowdownBG{
+padding: 10px;
+border-radius: 50px;
+background-color: #fef0ff;
+}
+
+.grocery{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 15px;
+}
+
+.groceryPara{
+  color: #EF4444;
 }

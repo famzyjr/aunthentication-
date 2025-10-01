@@ -13,8 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body class="">
+<body>
   <div>
+    <!-- Header -->
     <div class="headercon">
       <div class="header">
         <div class="searchbar">g</div>
@@ -24,72 +25,94 @@
         </div>
       </div>
     </div>
+
+    <!-- Dashboard Content -->
     <div class="DashboardContentCon">
+      <!-- Dashboard Header -->
       <div class="dasboardContentHeader">
         <div class="overviewHeader">
           <h1>Dashboard</h1>
           <p>Here's an overview of your finances</p>
         </div>
-        <div class="reportbtnCon"><button class="reportbtn">View Reports <img src="icons8-forward-24.png"
-              alt=""></button></div>
+        <div class="reportbtnCon">
+          <button class="reportbtn">
+            View Reports <img src="icons8-forward-24.png" alt="">
+          </button>
+        </div>
       </div>
+
+      <!-- Stats Cards -->
       <div class="flex flex-row justify-center gap-[20px]">
-        <div class="DashboardContent ">
+        <div class="DashboardContent">
           <div>
-            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] ">$</span>
+            <div class="flex gap-[20px] justify-center mt-[20px]">
+              <span class="text-[#2563EB] ">$</span>
               <p class="text-[#64748b]">Total Balance</p>
             </div>
             <div class="DashboardContentPara">
-              <p class="font-bold text-2xl  text-[#1E293B]">$24,851</p>
+              <p class="font-bold text-2xl text-[#1E293B]">$24,851</p>
               <div class="flex">
                 <div class="flex">
-                  <p class="DashboardContentPara"></p><img src="icons8-up-24.png" alt=""> +12.5%
+                  <p class="DashboardContentPara"></p>
+                  <img src="icons8-up-24.png" alt=""> +12.5%
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="DashboardContent ">
+
+        <div class="DashboardContent">
           <div>
-            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] "><img width="20"
-                  height="20" src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png"
-                  alt="bullish--v1" /></span>
+            <div class="flex gap-[20px] justify-center mt-[20px]">
+              <span class="text-[#2563EB]">
+                <img width="20" height="20"
+                     src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png"
+                     alt="bullish--v1" />
+              </span>
               <p class="text-[#64748b]">Investments</p>
             </div>
             <div class="DashboardContentPara">
-              <p class="font-bold text-2xl  text-[#1E293B]">$18,300</p>
+              <p class="font-bold text-2xl text-[#1E293B]">$18,300</p>
               <div class="flex">
                 <div class="flex">
-                  <p class="DashboardContentPara"></p><img src="icons8-up-24.png" alt="">+8.2%
+                  <p class="DashboardContentPara"></p>
+                  <img src="icons8-up-24.png" alt=""> +8.2%
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="DashboardContent ">
+
+        <div class="DashboardContent">
           <div>
-            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] "><img width="20"
-                  height="20" src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png"
-                  alt="money-box--v1" /></span>
+            <div class="flex gap-[20px] justify-center mt-[20px]">
+              <span class="text-[#2563EB]">
+                <img width="20" height="20"
+                     src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png"
+                     alt="money-box--v1" />
+              </span>
               <p class="text-[#64748b]">Savings</p>
             </div>
             <div class="DashboardContentPara">
-              <p class="font-bold text-2xl  text-[#1E293B]">$6,263</p>
+              <p class="font-bold text-2xl text-[#1E293B]">$6,263</p>
               <div class="flex">
                 <div class="flex">
-                  <p class="DashboardContentPara"></p><img src="icons8-up-24.png" alt=""> +24.3%
+                  <p class="DashboardContentPara"></p>
+                  <img src="icons8-up-24.png" alt=""> +24.3%
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="DashboardContent ">
+
+        <div class="DashboardContent">
           <div>
-            <div class="flex gap-[20px] justify-center mt-[20px]"><span class="text-[#2563EB] ">$</span>
+            <div class="flex gap-[20px] justify-center mt-[20px]">
+              <span class="text-[#2563EB] ">$</span>
               <p class="text-[#64748b]">Monthly Goal</p>
             </div>
             <div class="DashboardContentPara flex flex-col gap-[10px]">
-              <p class="font-bold text-2xl  text-[#1E293B]">78%</p>
+              <p class="font-bold text-2xl text-[#1E293B]">78%</p>
               <div class="progress-container">
                 <div class="progress-bar" id="myProgressBar"></div>
               </div>
@@ -102,90 +125,241 @@
           </div>
         </div>
       </div>
+
+      <!-- Charts + Goals -->
       <div>
         <div class="flex justify-center gap-[30px] mt-[20px]">
-        <div class="chartcon">
-          <div class="chartconText">
-           <h1 class="font-bold text-[10px]  text-[#1E293B]">Portfolio Performance</h1>
-           <p class="text-[#64748b]">Your investment growth over time</p>
+          <!-- Portfolio Chart -->
+          <div class="chartcon">
+            <div class="chartconText">
+              <h1 class="font-bold text-[10px] text-[#1E293B]">Portfolio Performance</h1>
+              <p class="text-[#64748b]">Your investment growth over time</p>
+            </div>
+            <div>
+              <canvas id="myChart" class="e"></canvas>
+            </div>
           </div>
-            <canvas id="myChart"></canvas>
-        </div>
-        <div class="chartconTwo mt">
-        <h2>Savings Goals</h2>
-        <li class="nav-item">
-          <div class="flex gap-2 cursor-pointer text-center sidebarContent">
-             <a href="Homepage.html" class=" mt-[2px] font-bold "><span
-                class="m">DashBoard</span></a>
+
+          <!-- Savings Goals -->
+          <div class="chartconTwoCon">
+            <div class="flex gap-[20px]">
+              <h2 class="font-bold">Savings Goals</h2>
+              <li class="nav-item">
+                <div class="flex gap-2 cursor-pointer text-center viewall">
+                  <a href="Homepage.html" class="mt-[2px] font-bold">
+                    <span class="m">View <br> All</span>
+                  </a>
+                </div>
+              </li>
+            </div>
+            <p class="mt-[20px] k">Track Your Progress</p>
+
+            <!-- Goal 1 -->
+            <div class="flex mt-[20px]">
+              <h2 class="font-bold">Emergency Fund</h2>
+              <div class="cursor-pointer text-center">
+                <div class="flex font-bold k">
+                  <div>$6,500 10,000</div>
+                  <div> /</div>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar" id="myProgressBar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Goal 2 -->
+            <div class="flex mt-[20px]">
+              <h2 class="font-bold">New Laptop</h2>
+              <div class="cursor-pointer text-center">
+                <div class="flex font-bold k">
+                  <div>$750 $1,500</div>
+                  <div>/</div>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar" id="myProgressBar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Goal 3 -->
+            <div class="flex mt-[20px]">
+              <h2 class="font-bold">Vacation</h2>
+              <div class="cursor-pointer text-center">
+                <div class="flex font-bold k">
+                  <div class="k">$1,200 / $3,000</div>
+                </div>
+                <div class="progress-container">
+                  <div class="progress-bar" id="myProgressBar"></div>
+                </div>
+              </div>
+            </div>
           </div>
-        </li>
         </div>
+      </div> <!-- End Charts + Goals -->
+    
+      <div class="">
+        <div class="RecentTransactions"> 
+        <div class="RecentTransactionsHeader">
+           <div><h1 class="font-bold">Recent Transaction</h1></div>
+         <div><a href="http://" class="viewall d RecentText"><p >View All </p></a> </div>
+        </div>
+        <div>
+          
+          <div class="grocery">
+           <div class="flex flex-row gap-[10px]">
+            <img src="arrow-down.png" class="arrowdownBG" alt="">
+            <div >
+            <h2>Grocery Store</h2>
+            <span class="text-[gray]">Mar 30 • Groceries</span>
+           </div>
+           </div>
+           <p class="groceryPara">-$125</p>
+          </div>
+
+           <div class="grocery">
+           <div class="flex flex-row gap-[10px]">
+            <img src="arrow-down.png" class="arrowdownBG" alt="">
+            <div >
+            <h2>Grocery Store</h2>
+            <span class="text-[gray]">Mar 30 • Groceries</span>
+           </div>
+           </div>
+           <p class="groceryPara">-$125</p>
+          </div>
         </div>
 
+         <div class="grocery">
+           <div class="flex flex-row gap-[10px]">
+            <img src="arrow-down.png" class="arrowdownBG" alt="">
+            <div >
+            <h2>Grocery Store</h2>
+            <span class="text-[gray]">Mar 30 • Groceries</span>
+           </div>
+           </div>
+           <p class="groceryPara">-$125</p>
+          </div>
+
+           <div class="grocery">
+           <div class="flex flex-row gap-[10px]">
+            <img src="arrow-down.png" class="arrowdownBG" alt="">
+            <div >
+            <h2>Grocery Store</h2>
+            <span class="text-[gray]">Mar 30 • Groceries</span>
+           </div>
+           </div>
+           <p class="groceryPara">-$125</p>
+          </div>
+
+           <div class="grocery">
+           <div class="flex flex-row gap-[10px]">
+            <img src="arrow-down.png" class="arrowdownBG" alt="">
+            <div >
+            <h2>Grocery Store</h2>
+            <span class="text-[gray]">Mar 30 • Groceries</span>
+           </div>
+           </div>
+           <p class="groceryPara">-$125</p>
+          </div>
+      </div>
+      d
       </div>
 
-    </div>
-    <div class="bg-[#fff] w-[200px] ddd z-10 sidebar ">
+       
+    
+
+    <!-- Sidebar -->
+    <div class="bg-[#fff] w-[200px] ddd z-10 sidebar">
       <div class="navheader p-[10px]">
-        <h1 class=" ff text-[#2563EB] sidebarheader font-bold p-[20px]  text-2xl">$ FinSave</h1>
-        <div> <span class="headerBorder"></span> </div>
+        <h1 class="ff text-[#2563EB] sidebarheader font-bold p-[20px] text-2xl">$ FinSave</h1>
+        <div><span class="headerBorder"></span></div>
       </div>
+
       <ul class="flex flex-col p-[0px] nav_links gap-[30px]">
         <li class="nav-item">
           <div class="flex gap-2 cursor-pointer text-center sidebarContent">
-            <div><img width="20" height="20 " src="https://img.icons8.com/ios-glyphs/30/228BE6/windows-11.png"
-                alt="windows-11" /></div> <a href="Homepage.html" class=" mt-[2px] font-bold "><span
-                class="m">DashBoard</span></a>
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/ios-glyphs/30/228BE6/windows-11.png"
+                   alt="windows-11" />
+            </div>
+            <a href="Homepage.html" class="mt-[2px] font-bold"><span class="m">DashBoard</span></a>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="flex sidebarContent gap-2 cursor-pointer">
-            <div><img width="20" height="20" src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png"
-                alt="bullish--v1" /></div> <a href="investment.html" class=" mt-[2px] font-bold "><span
-                class="m">Investments</span></a>
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/glyph-neue/64/228BE6/bullish--v1.png"
+                   alt="bullish--v1" />
+            </div>
+            <a href="investment.html" class="mt-[2px] font-bold"><span class="m">Investments</span></a>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="flex sidebarContent gap-2 cursor-pointer">
-            <div><img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png"
-                alt="money-box--v1" /></div> <a href="Savings.html" class=" mt-[2px] font-bold "><span
-                class="m">Savings</span></a>
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/ios-glyphs/30/228BE6/money-box--v1.png"
+                   alt="money-box--v1" />
+            </div>
+            <a href="Savings.html" class="mt-[2px] font-bold"><span class="m">Savings</span></a>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="flex sidebarContent gap-2 cursor-pointer">
-            <div><img width="20" height="20"
-                src="https://img.icons8.com/external-goofy-solid-kerismaker/96/228BE6/external-Desk-Calender-stationery-goofy-solid-kerismaker.png"
-                alt="external-Desk-Calender-stationery-goofy-solid-kerismaker" /></div> <a href="Transactions.html"
-              class=" mt-[2px] font-bold "><span class="m">Transactions</span></a>
-          </div>
-        <li class="nav-item">
-          <div class="flex sidebarContent gap-2 cursor-pointer">
-            <div><img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/228BE6/bar-chart.png"
-                alt="bar-chart" /></div> <a href="Analytics.html" class=" mt-[2px] font-bold "><span
-                class="m">Analytics</span></a>
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/external-goofy-solid-kerismaker/96/228BE6/external-Desk-Calender-stationery-goofy-solid-kerismaker.png"
+                   alt="calendar" />
+            </div>
+            <a href="Transactions.html" class="mt-[2px] font-bold"><span class="m">Transactions</span></a>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="flex sidebarContent gap-2 cursor-pointer">
-            <div><img width="20" height="20" src="https://img.icons8.com/material-rounded/24/228BE6/user.png"
-                alt="user" /></div> <a href="Contacts.html" class=" mt-[2px] font-bold "><span
-                class="m">Contacts</span></a>
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/ios-glyphs/30/228BE6/bar-chart.png"
+                   alt="bar-chart" />
+            </div>
+            <a href="Analytics.html" class="mt-[2px] font-bold"><span class="m">Analytics</span></a>
           </div>
         </li>
+
         <li class="nav-item">
           <div class="flex sidebarContent gap-2 cursor-pointer">
-            <div><img width="20" class="nav-item" height="20"
-                src="https://img.icons8.com/material-sharp/24/228BE6/settings.png" alt="settings" /></div> <a
-              href="Settings.html" class=" mt-[2px] font-bold "> <span class="m">Settings</span></a>
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/material-rounded/24/228BE6/user.png"
+                   alt="user" />
+            </div>
+            <a href="Contacts.html" class="mt-[2px] font-bold"><span class="m">Contacts</span></a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="flex sidebarContent gap-2 cursor-pointer">
+            <div>
+              <img width="20" height="20"
+                   src="https://img.icons8.com/material-sharp/24/228BE6/settings.png"
+                   alt="settings" />
+            </div>
+            <a href="Settings.html" class="mt-[2px] font-bold"><span class="m">Settings</span></a>
           </div>
         </li>
       </ul>
+
+
+      <!-- User + Logout -->
       <div class="p-2">
-        <div class="ff"> <span class="ff"></span> </div>
-        <div class="flex items-center gap-[15px]  mt-[10px] ">
-          <div
-            class=" iconBG rounded-full w-[45px] h-[45px] flex items-center justify-center text-white font-bold  cursor-pointer">
+        <div class="ff"><span class="ff"></span></div>
+        <div class="flex items-center gap-[15px] mt-[10px]">
+          <div class="iconBG rounded-full w-[45px] h-[45px] flex items-center justify-center text-white font-bold cursor-pointer">
             <span id="loggedUserEmail"></span>
           </div>
           <div class="flex gap-[8px] text-gray-800 font-bold m">
@@ -193,15 +367,18 @@
             <div><span id="loggedUserLName"></span></div>
           </div>
         </div>
-        <div id="logoutButton" class="flex gap-[20px] justify-center cursor-pointer  text-blue-700"> <img width="20"
-            height="20" class=" ml-auo mt-[140px] " src="https://img.icons8.com/ios/50/228BE6/exit--v1.png"
-            alt="exit--v1" />
+        <div id="logoutButton"
+             class="flex gap-[20px] justify-center cursor-pointer text-blue-700">
+          <img width="20" height="20"
+               class="ml-auo mt-[140px]"
+               src="https://img.icons8.com/ios/50/228BE6/exit--v1.png"
+               alt="exit" />
           <p class="d">Sign out</p>
         </div>
       </div>
     </div>
   </div>
-   <script type="module" src="homepage.js"></script>
-</body>
 
+  <script type="module" src="homepage.js"></script>
+</body>
 </html>

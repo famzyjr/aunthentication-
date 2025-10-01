@@ -69,9 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function updateProgressBar(percentage) {
-  const progressBar = document.getElementById('myProgressBar');
-  progressBar.style.width = percentage + '%';
-  progressBar.textContent = percentage + '%'; // Optional: display percentage text
+  const progressBar = document.querySelectorAll('#myProgressBar');
+  progressBar.forEach(item =>{
+     item.style.width = percentage + '%';
+  item.textContent = percentage + '%';
+  })
+  // Optional: display percentage text
 }
 
 // Example usage:
@@ -105,7 +108,7 @@ new Chart(ctx, {
       }
     },
     layout: {
-      // padding: 100
+      
     },
     scales: {
       y: {
