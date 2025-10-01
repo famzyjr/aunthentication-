@@ -234,7 +234,11 @@ padding: 10px;
 border-radius: 50px;
 background-color: #fef0ff;
 }
-
+.arrowdownBGsecond{
+background-color: #EBF9F5;
+padding: 10px;
+border-radius: 50px;
+}
 .grocery{
   display: flex;
   justify-content: space-between;
@@ -244,4 +248,8 @@ background-color: #fef0ff;
 
 .groceryPara{
   color: #EF4444;
+}
+
+.groceryParaSecond{
+color: #6DBE81;
 }
