@@ -234,11 +234,13 @@ padding: 10px;
 border-radius: 50px;
 background-color: #fef0ff;
 }
+
 .arrowdownBGsecond{
 background-color: #EBF9F5;
 padding: 10px;
 border-radius: 50px;
 }
+
 .grocery{
   display: flex;
   justify-content: space-between;
@@ -252,4 +254,75 @@ border-radius: 50px;
 
 .groceryParaSecond{
 color: #6DBE81;
+}
+
+.SpendingbyCategoryCon{
+ background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+ border: 1px solid #e5e7eb;
+  width: 230px;
+  gap: 20px;;
+}
+
+.SpendingbyCategory{
+  display: flex; 
+  justify-content: space-around;
+}
+
+
+.RecentTransactionsCons{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.secondChart{
+ margin-top: 70px;
+}
+
+/* CSS */
+.legend-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;           /* keeps borders neat */
+  box-shadow: 0 0 0 0 rgba(0,0,0,0); /* optional */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* dot+label on left, value on right */
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6e9ee; /* <-- the border-bottom you wanted */
+}
+
+.legend-item:last-child {
+  border-bottom: none;        /* remove border on the last item */
+}
+
+.legend-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.label {
+  color: #6b7280;            /* muted text for the label */
+  font-size: 14px;
+}
+
+.value {
+  font-weight: 700;
+  color: #1E293B;
 }

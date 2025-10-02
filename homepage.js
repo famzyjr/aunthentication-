@@ -92,7 +92,7 @@ const interval = setInterval(() => {
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
-  type: 'line',
+  type: 'bar',
   data: {
     labels: ['2025-01-27', '2025-02-28', '2025-03-29', '2025-04-30', '2025-05-1', '2025-02-11',],
     datasets: [{
@@ -124,3 +124,41 @@ new Chart(ctx, {
     }
   }
 });
+
+
+const ct = document.getElementById('myCharts');
+
+new Chart(ct, {
+  type: 'doughnut',
+  data: {
+    labels: ['2025-01-27', '2025-02-28', '2025-03-29', '2025-04-30', '2025-05-1', '2025-02-11',],
+    datasets: [{
+      label: 'Portfolio',
+      data: [100, 200, 300, 400, 500, 600, 700, 800],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false  // 🚫 hides the legend
+      }
+    },
+    layout: {
+  
+    },
+    
+    scales: {
+        x: {
+          display: false,  // ❌ hide X axis numbers and lines
+          grid: { drawBorder: false, drawTicks: false, display: false }
+        },
+        y: {
+          display: false,  // ❌ hide Y axis numbers and lines
+          grid: { drawBorder: false, drawTicks: false, display: false }
+        }
+      }
+  }
+});
+
+
