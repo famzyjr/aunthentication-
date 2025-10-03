@@ -92,7 +92,7 @@ const interval = setInterval(() => {
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
-  type: 'bar',
+  type: 'line',
   data: {
     labels: ['2025-01-27', '2025-02-28', '2025-03-29', '2025-04-30', '2025-05-1', '2025-02-11',],
     datasets: [{
@@ -162,3 +162,24 @@ new Chart(ct, {
 });
 
 
+
+const Openbtn = document.getElementById('open');
+const Closebtn = document.getElementById('Closebtn');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+const SiderbarOpen = () => {
+  sidebar.classList.add('show');
+  overlay.classList.add('show');
+  document.body.style.overflow = 'hidden'; // prevent scroll
+}
+
+const SiderbarClose = () => {
+  sidebar.classList.remove('show');
+  overlay.classList.remove('show');
+  document.body.style.overflow = ''; // re-enable scroll
+}
+
+// Event listeners
+Openbtn.onclick = () => SiderbarOpen(); // Make sure this is hooked up!
+overlay.onclick = () => SiderbarClose(); // Optional: close when clicking overlay

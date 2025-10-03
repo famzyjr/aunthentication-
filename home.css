@@ -13,17 +13,7 @@ body {
 
 /* ===== Sidebar ===== */
 .sidebar {
-  position: fixed;
-  top: 0;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  left: 0;
-  width: 220px;
-  height: 100vh;
-  background: #fff;
-  border-right: 1px solid gainsboro;
-  z-index: 1000; 
-  overflow-y: auto;   /* ✅ sidebar can scroll if items overflow */
+ 
 }
 
 /* ===== Header ===== */
@@ -38,10 +28,26 @@ body {
   border-bottom: 1px solid gainsboro;
   z-index: 900; 
 }
+.name{
+  z-index: -10;
+}
+/* Overlay hidden by default */
+.overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+}
+
+/* Show overlay only when sidebar is opened (on mobile) */
+.overlay.show {
+  display: block;
+}
 
 .header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -325,4 +331,510 @@ color: #6DBE81;
 .value {
   font-weight: 700;
   color: #1E293B;
+}
+.PortfolioChart{
+padding: 20px;
+}
+
+#open{
+  display: none;
+}
+.overlay{
+  display: none;
+}
+.sidebar.show {
+  right: 0;  /* 👈 slides back into view */
+}
+/* Default sidebar (desktop) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid gainsboro;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out; /* smooth slide */
+  overflow-y: auto;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 999px) {
+  .headercon {
+    left: 0; /* header spans full width */
+  }
+  .DashboardContentCon {
+    margin-left: 0; /* remove sidebar gap */
+  }
+  #open {
+    display: block; /* show menu button */
+  }
+}
+
+@media (max-width: 1040px) {
+ 
+}
+
+@media (max-width: 999px) {
+  body {
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto;   /* ✅ always allow vertical scroll */
+  overflow-x: hidden; /* ✅ prevent horizontal scroll */
+   font-family: "Geist", sans-serif;
+}
+
+
+
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid gainsboro;
+  z-index: 1000; 
+   transition: left 0.3s ease-in-out; /* 👈 smooth slide *
+  overflow-y: auto;   /* ✅ sidebar can scroll if items overflow */
+}
+
+/* ===== Header ===== */
+.headercon {
+  position: fixed;
+  top: 0;
+  left: 220px;   /* ✅ starts after sidebar */
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid gainsboro;
+  z-index: 900; 
+}
+.name{
+  z-index: -10;
+}
+/* Overlay hidden by default */
+.overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+}
+
+/* Show overlay only when sidebar is opened (on mobile) */
+.overlay.show {
+  display: block;
+}
+
+.header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+/* ===== Dashboard Content ===== */
+.DashboardContentCon {
+  position: relative;
+  margin-left: 220px;  /* ✅ leaves space for sidebar */
+  margin-top: 80px;    /* ✅ leaves space for header */
+  padding: 20px;
+  z-index: 10;
+  min-height: 100vh;   /* ✅ makes body always tall enough */
+}
+
+
+
+/* ===== Other Styles ===== */
+.iconBG {
+  background-color: #2563eb;
+  padding: 20px;
+}
+
+.d {
+  color: #2563eb;
+}
+
+.active {
+  color: #2563eb;
+}
+
+li {
+  list-style: none;
+  color: #64748b;
+}
+
+.sidebarContent {
+  height: 50px;
+  width: 160px;
+  padding: 10px 0 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.sidebarContent:hover {
+  background-color: #F5F5F5;
+}
+
+.ff{
+  width: 220px;
+  position: relative;
+  right: 10px;
+  border-bottom: 1px solid gainsboro;  /* 👈 adds bottom border */
+}
+
+.dasboardContentHeader{
+display: flex;
+flex-direction: row;
+gap: 20px;
+justify-content:space-around;
+}
+
+.reportbtn{
+  background-color: #3A67D8;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  border-radius: 20px;
+  cursor:pointer;
+  gap: 10px;
+}
+
+.overviewHeader h1{
+font-weight: 800;
+font-size: 25px;
+}
+.overviewHeader p{
+  color: #64748b; 
+}
+.MonthlyGoalPara{
+  color: green;
+}
+.DashboardContentPara p{
+  color: #1E293B;
+}
+.DashboardContentPara{
+  color:#10b981;
+  margin-top: 20px;
+}
+
+.DashboardContent {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 20px;
+  width: 210px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  width: 0%; /* Initial width */
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+
+.chartcon{
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  width: 600px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.chartconText{
+  display: flex;
+  justify-content: space-between;
+}
+
+.chartconTwoCon{
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  width: 230px;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 30px;
+  
+}
+
+.viewall{
+   height: 50px;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.viewall:hover{
+   background-color: #F5F5F5;
+}
+
+.k{
+  color: gray;
+}
+
+.e{
+margin-top: 30px;
+
+}
+
+.RecentTransactions{
+  background-color: #fff;
+  width: 600px;
+  height: 530px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;;
+  padding: 20px;
+}
+.RecentTransactionsHeader{
+  display: flex;
+  justify-content: space-between;
+}
+.RecentText{
+font-weight: 400;
+}
+
+.arrowdownBG{
+padding: 10px;
+border-radius: 50px;
+background-color: #fef0ff;
+}
+
+.arrowdownBGsecond{
+background-color: #EBF9F5;
+padding: 10px;
+border-radius: 50px;
+}
+
+.grocery{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 15px;
+}
+
+.groceryPara{
+  color: #EF4444;
+}
+
+.groceryParaSecond{
+color: #6DBE81;
+}
+
+.SpendingbyCategoryCon{
+ background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+ border: 1px solid #e5e7eb;
+  width: 230px;
+  gap: 20px;;
+}
+
+.SpendingbyCategory{
+  display: flex; 
+  justify-content: space-around;
+}
+
+
+.RecentTransactionsCons{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.secondChart{
+ margin-top: 70px;
+}
+
+/* CSS */
+.legend-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;           /* keeps borders neat */
+  box-shadow: 0 0 0 0 rgba(0,0,0,0); /* optional */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* dot+label on left, value on right */
+  padding: 10px 12px;
+  border-bottom: 1px solid #e6e9ee; /* <-- the border-bottom you wanted */
+}
+
+.legend-item:last-child {
+  border-bottom: none;        /* remove border on the last item */
+}
+
+.legend-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.label {
+  color: #6b7280;            /* muted text for the label */
+  font-size: 14px;
+}
+
+.value {
+  font-weight: 700;
+  color: #1E293B;
+}
+.PortfolioChart{
+padding: 20px;
+}
+
+#open{
+  display: none;
+}
+.overlay{
+  display: none;
+}
+.sidebar.show {
+  right: 0;  /* 👈 slides back into view */
+}
+/* Default sidebar (desktop) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  background: #fff;
+  border-right: 1px solid gainsboro;
+  z-index: 1000;
+  transition: left 0.3s ease-in-out; /* smooth slide */
+  overflow-y: auto;
+}
+
+
+
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+#overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 999px) {
+  .headercon {
+    left: 0; /* header spans full width */
+  }
+  .DashboardContentCon {
+    margin-left: 0; /* remove sidebar gap */
+  }
+  #open {
+    display: block; /* show menu button */
+  }
+}
+
+@media (max-width: 1040px) {
+ 
+}
+
+
+@media (max-width: 999px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: -0;
+    /* height: 100vh; */
+    z-index: 1000;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+ .headercon{
+  display: flex;
+  gap: 20px;
+  left: 0px;
+ }
+ 
+ .header{
+  display: flex;
+  gap: 40px;
+ }
+ #open{
+  display: block;
+ }
+}
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+ .headercon{
+  display: flex;
+  gap: 20px;
+  left: 0px;
+ }
+ 
+ .header{
+  display: flex;
+  gap: 40px;
+ }
+ #open{
+  display: block;
+ }
 }
